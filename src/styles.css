@@ -1,0 +1,124 @@
+.next-kit-consent {
+    --next-kit-accent: #ea580c;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    max-width: 56rem;
+    margin-inline: auto;
+    padding: 1.25rem;
+    border: 1px solid var(--next-kit-accent);
+    border-radius: 0.5rem;
+    background: #0c0a09;
+    color: #fafaf9;
+    box-shadow: 4px 4px 0 #ea580c80;
+    font-family: system-ui, sans-serif;
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+}
+
+.next-kit-consent h2 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.next-kit-consent p {
+    margin: 0.75rem 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.next-kit-consent a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.next-kit-consent button {
+    border: 1px solid #78716c;
+    border-radius: 0.3rem;
+    padding: 0.6rem 1rem;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.next-kit-consent button:hover {
+    border-color: var(--next-kit-accent);
+}
+
+.next-kit-consent button:focus-visible,
+.next-kit-consent a:focus-visible,
+.next-kit-consent input:focus-visible {
+    outline: 2px solid var(--next-kit-accent);
+    outline-offset: 3px;
+}
+
+.next-kit-consent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.next-kit-consent-actions button:last-child {
+    background: var(--next-kit-accent);
+    border-color: var(--next-kit-accent);
+}
+
+.next-kit-consent fieldset {
+    border: 1px solid #78716c;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.next-kit-consent label {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.next-kit-consent input {
+    accent-color: var(--next-kit-accent);
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.next-kit-up {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    background: #fafaf9;
+    color: #1c1917;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+}
+
+.next-kit-up-icon {
+    display: inline-block;
+    font-size: 2rem;
+    color: #ea580c;
+}
+
+.next-kit-up dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid #d6d3d1;
+    border-radius: 0.5rem;
+}
+
+.next-kit-up dd {
+    margin: 0;
+}
+@media (prefers-color-scheme: dark) {
+    .next-kit-up {
+        background: #0c0a09;
+        color: #fafaf9;
+    }
+}

@@ -1,0 +1,97 @@
+{
+  "name": "@mrepol742/next-kit",
+  "version": "0.1.0",
+  "description": "Shared Next.js utilities, server integrations, consent UI, and setup tools.",
+  "type": "module",
+  "author": {
+    "name": "Melvin Jones Repol",
+    "email": "mrepol742@gmail.com",
+    "url": "https://mrepol742.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrepol742/next-kit.git"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "src/styles.css",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "exports": {
+    "./message": {
+      "types": "./dist/message.d.ts",
+      "default": "./dist/message.js"
+    },
+    "./email": {
+      "types": "./dist/email.d.ts",
+      "default": "./dist/email.js"
+    },
+    "./consent": {
+      "types": "./dist/consent/index.d.ts",
+      "default": "./dist/consent/index.js"
+    },
+    "./server/redis": {
+      "types": "./dist/server/redis.d.ts",
+      "default": "./dist/server/redis.js"
+    },
+    "./server/recaptcha": {
+      "types": "./dist/server/recaptcha.d.ts",
+      "default": "./dist/server/recaptcha.js"
+    },
+    "./server/rate-limit": {
+      "types": "./dist/server/rate-limit.d.ts",
+      "default": "./dist/server/rate-limit.js"
+    },
+    "./next/headless-browser-check": {
+      "types": "./dist/next/headless-browser-check.d.ts",
+      "default": "./dist/next/headless-browser-check.js"
+    },
+    "./next/rate-limiter": {
+      "types": "./dist/next/rate-limiter.d.ts",
+      "default": "./dist/next/rate-limiter.js"
+    },
+    "./next/up": {
+      "types": "./dist/next/up.d.ts",
+      "default": "./dist/next/up.js"
+    },
+    "./styles.css": "./src/styles.css"
+  },
+  "bin": {
+    "next-kit": "./bin/next-kit.mjs"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --conditions=react-server --test tests/*.test.mjs",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "peerDependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@google-cloud/recaptcha-enterprise": "^6.4.0",
+    "@upstash/redis": "^1.38.4",
+    "sanitize-html": "^2.17.7",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/sanitize-html": "^2.16.1",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
