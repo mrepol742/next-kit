@@ -56,6 +56,14 @@
       "types": "./dist/next/up.d.ts",
       "default": "./dist/next/up.js"
     },
+    "./hooks": {
+      "types": "./dist/hooks/theme.d.ts",
+      "default": "./dist/hooks/theme.js"
+    },
+    "./util": {
+      "types": "./dist/util/date.d.ts",
+      "default": "./dist/util/date.js"
+    },
     "./styles.css": "./src/styles.css"
   },
   "bin": {
