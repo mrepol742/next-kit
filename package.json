@@ -1,6 +1,6 @@
 {
   "name": "@mrepol742/next-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared Next.js utilities, server integrations, consent UI, and setup tools.",
   "type": "module",
   "author": {
