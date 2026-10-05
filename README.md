@@ -60,7 +60,7 @@ Copyright © 2026 Melvin Jones Repol. All rights reserved.
 
 Next-Kit is publicly viewable but **not licensed for public use**.
 
-See the [`LICENSE`](./LICENSE) file for the complete terms.
+See the [`LICENSE.md`](./LICENSE.md) file for the complete terms.
 
 ---
 
