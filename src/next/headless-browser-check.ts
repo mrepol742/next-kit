@@ -19,6 +19,23 @@ const DEFAULT_PATTERNS = [
   "postmanruntime",
 ];
 
+const DEFAULT_ALLOWED = [
+  "googlebot",
+  "bingbot",
+  "duckduckbot",
+  "applebot",
+  "baiduspider",
+  "yandexbot",
+  "facebookexternalhit",
+  "whatsapp",
+  "facebot",
+  "twitterbot",
+  "xbot",
+  "linkedinbot",
+  "slackbot",
+  "discordbot",
+];
+
 export interface HeadlessBrowserCheckOptions {
   patterns?: readonly string[];
   allowPatterns?: readonly string[];
@@ -38,7 +55,7 @@ export function createHeadlessBrowserCheck(
   const patterns = (options.patterns ?? DEFAULT_PATTERNS).map((value) =>
     value.toLowerCase(),
   );
-  const allowed = (options.allowPatterns ?? []).map((value) =>
+  const allowed = (options.allowPatterns ?? DEFAULT_ALLOWED).map((value) =>
     value.toLowerCase(),
   );
   return (request: Request): NextResponse | undefined => {
